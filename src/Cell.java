@@ -40,6 +40,13 @@ public class Cell{
             g.drawRect(this.xcoord,this.ycoord,this.size, this.size);
         }
 
+        public void drawCell(Graphics g, Color hue){
+            g.setColor(hue);
+            g.fillRect(this.xcoord,this.ycoord,this.size, this.size);
+            g.setColor(this.lineColour);
+            g.drawRect(this.xcoord,this.ycoord,this.size, this.size);
+        }
+
         public void drawHighlightedCell(Graphics g){
             g.setColor(Color.GREEN);
             g.fillRect(this.xcoord-5,this.ycoord-5,this.size+10, this.size+10);
