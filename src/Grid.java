@@ -49,7 +49,7 @@ public class Grid{
                 for (int j = 0; j < this.height; j++){
                     //Color newColour = new Color(255*(i/width),255*(((j+i)/height)/2),255*(j/height));
                     //Color newColour = new Color(i*(255/width),((i+j)*(255/width))/2,j*(255/width));
-                    Color newColour = new Color(i*(255/width),(255-(j*(255/width)))/2,j*(255/width));
+                    Color newColour = new Color(i*(255/width),(255-(j+i*(255/width)/2))/2,j*(255/width));
 
                     this.grid[i][j] = new Cell(i,j,this.cellSize,this.offset, newColour);
                 }
